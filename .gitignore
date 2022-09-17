@@ -25,3 +25,7 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# Ignore the domain components which might be linked or copied
+/fundraising_events
+/fundraising_events/*
