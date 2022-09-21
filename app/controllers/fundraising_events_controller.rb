@@ -4,7 +4,9 @@ class FundraisingEventsController < ApplicationController
   def create
     response = Betterplace::FundraisingEvents.create(create_params)
 
-    render json: response.to_json, status: :created
+    fundraising_event = response.as_json
+
+    render json: { fundraising_event: }, status: :created
   end
 
   private
