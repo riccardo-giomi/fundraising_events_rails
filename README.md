@@ -1,24 +1,22 @@
-# README
+# Rails application as a plugin for a clean-architecture component
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Installation
 
-Things you may want to cover:
+1. if not already, pull [the component](https://github.com/riccardo-giomi/fundraising_events) somewhere, for example in `~/projects/`;
 
-* Ruby version
+2. pull this project alongside the component's directory, following the previous example, this would still be in `~/projects/`;
 
-* System dependencies
+3. link the fundraising_event directory in the root of the Rails app, for example:
 
-* Configuration
+```bash
+cd ~/projects/fundraising_events_rails
+ln -s ../fundraising_events .
+```
 
-* Database creation
+4. do the usual Rails installation stuff:
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```bash
+bundle
+bundle exec rails db:create db:migrate
+bundle exec rspec
+```
