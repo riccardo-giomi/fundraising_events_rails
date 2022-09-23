@@ -8,7 +8,7 @@ module Betterplace
       def create(params)
         validate_params(params)
         request = Domain::FundraisingEvents::CreateRequest.new(**params)
-        Domain::CreateFundraisingEvent.new(gateway: data_gateway).call(request)
+        super(request)
       end
 
       def data_gateway
